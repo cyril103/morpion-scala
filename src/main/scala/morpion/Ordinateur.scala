@@ -18,7 +18,7 @@ case class Ordinateur(
 
     tab(Evaluation2(tab, value)) = value
 
-    tour = !_tour
+    tour = !tour
   }
 
 
