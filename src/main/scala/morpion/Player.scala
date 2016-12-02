@@ -5,7 +5,8 @@ package morpion
   */
 trait Player {
 
-  protected var tour:Boolean
+  def tour:Boolean
+  def tour_=(t : Boolean)
 
   def message :String
   val symbol:String
