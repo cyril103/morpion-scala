@@ -9,7 +9,6 @@ object Main extends App {
 
     partie.init
 
-    println("hello")
 
     Thread.sleep(2000)
     partie.question
