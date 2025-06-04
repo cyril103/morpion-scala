@@ -141,9 +141,16 @@ object Evaluation2 {
 
 
 
-  def apply(tab: Array[Int], value: Int): Int ={
-    val tour = if(value==5) true else false
-    minimax2(new Origine(tab,tour),9, (tour,5)).pos
+  def apply(tab: Array[Int], value: Int): Int = {
+    // "tour" indique si le joueur courant utilise le symbole X (3) ou O (5).
+    //  true  -> joueur X
+    //  false -> joueur O
+    val tour = if (value == 3) true else false
+
+    // Le premier appel à minimax doit toujours chercher le meilleur coup pour
+    // le joueur courant, on se place donc dans le cas maximisant avec la
+    // valeur du joueur courant.
+    minimax2(new Origine(tab, tour), 9, (true, value)).pos
 
 
 
